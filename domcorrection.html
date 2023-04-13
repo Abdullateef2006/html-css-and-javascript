@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="message"></div>
+    <div id="output" ></div>
+
+    <script>
+        let arrayName = ["Abdullateef", "Sodiq", "Aishat", "Latifat", "Habeeb", "Sekinat", "AbdulQudus", "Faruk", "Isiak"]
+        let message = document.querySelector("#message")
+        build()
+        function build() {
+            let html = "<h1>My siblings</h1><table>"
+            arrayName.forEach((item, index) => {
+                html += `<tr class="box" data-row="${index + 1}" data-name="${item}" onclick="getData(this)" id="box"><td>${item}</td>`
+                html += `<td>${index + 1}</td></tr>`
+            })
+            html += "</table>"
+            document.getElementById("output").innerHTML = html
+        }
+   
+        function getData(x) {
+            let temp = x.getAttribute("data-row")
+            let tempName = x.getAttribute("data-name")
+            message.innerHTML = `${tempName} is in row #${temp}`
+        }
+    </script>
+</body>
+
+</html>

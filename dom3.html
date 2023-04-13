@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function changeAttribute() {
+            let change = document.getElementById("FirstId")
+            change.setAttribute("style", "background-color:red; border:1px solid;")
+            change.setAttribute("id", "new")
+            change.setAttribute("class", "circle")
+        }
+    </script>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: chartreuse;
+        }
+        .circle {
+            border-radius: 50%;
+        }
+    </style>
+    <div id="FirstId" class="square"></div>
+    <button onclick="changeAttribute()"> click</button>
+</body>
+</html>

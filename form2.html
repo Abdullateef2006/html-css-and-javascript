@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My jamb form</title>
+    <link rel="stylesheet" href="formdiv.css">
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <h1>Registration for JAMB 2022</h1>
+                <label for="fName">First Name</label><input type="text" name="fName" placeholder="Input your first name"><br/>
+                <label for="lName">Last Name</label><input type="text" name="lName" placeholder="Input your last name"><br/>
+                <label for="sOrigin">State of Origin</label><input type="text" list="State of Origin" name="sOrigin"><br/>
+                    <datalist id="State of Origin">
+                        <option value="Abia">
+                        <option value="Adamawa">
+                        <option value="Akwa-Ibom">
+                        <option value="Anambra">
+                        <option value="Bauchi">
+                        <option value="Bayelsa">
+                        <option value="Benue">
+                        <option value="Bornu">
+                        <option value="Cross-River">
+                        <option value="Lagos">
+                        <option value="Ogun">
+                        <option value="Osun">    
+                    </datalist>            
+                <label for="count">Country</label><input type="text" name="count" placeholder="Input your Country"><br/>                
+                <label for="lgovtArea">Local government area</label><input type="text" list="Local government area" name="lgovtArea"><br/>
+                    <datalist id="Local government area">
+                        <option value="Alimosho">
+                        <option value="ikeja">
+                        <option value="Shomolu">
+                        <option value="Mushin">
+                        <option value="Lagos Island">
+                    </datalist>
+                <label for="pNumber">Phone number</label><input type="text" name="pNumber" placeholder="Input your Phone Number"><br/>
+                <label for="dBirth">Date of Birth:</label><input type="date" name="dBirth" placeholder="Enter your Date of Birth"><br/>
+            <input type="submit" value="CLICK TO SUBMIT">
+            <input type="reset" value="CLICK TO CLEAR">
+        </fieldset>
+    </form>
+    <script src="myarray.js"></script>
+    
+    
+    
+</body>
+</html>

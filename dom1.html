@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div1" id="Div1" onclick="div()">I am 16 years old</div>
+    <div class="div2" id="Div2">An aeroplane is faster than a car</div>
+    <div class="div3" id="Div3">I went to the market and bought a new shoe</div>
+    <div class="div4" id="Div3">I love coding</div>
+    <div class="div5" id="Div5">I have bought a new shoe</div>
+
+    <script>
+        let a = document.querySelectorAll("div")
+        for (let b of a) {
+            console.log(b.innerText);
+        }
+        function div() {
+            alert("AsSalam Alaikum")
+        }
+        function clickMe(param) {
+            console.log(param.parentElement);
+        }
+        function tap(greet) {
+            console.dir(greet.innerText);
+        }
+        function toggle() {
+            let b = document.getElementById("p1")
+            if (b.style.display === "none") {
+                b.style.display = "block"
+            } else {
+                b.style.display = "none"
+            }
+        }
+
+    </script>
+    <button onclick="tap(this)">How are you today</button>
+    <button onclick="tap(this)">Alhamdulilah</button>
+    <button onclick="clickMe(this)">Click me</button>
+    <h1 onclick="clickMe(this)">AsSalam Alaykum</h1>
+    <h4 onclick="clickMe(this)">I am Abdullateef</h4>
+    <button onclick="toggle()">click</button>
+    <p id="p1">AsSalam Alaikum</p>
+
+</body>
+</html>

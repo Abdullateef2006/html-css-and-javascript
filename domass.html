@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 0.3px solid black;
+            width: 300px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>sibling</th>
+        </tr>
+        <tr onclick="getData()" id="html" class="AsSalam Alaikum">
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+        </tr>
+        <tr>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+        </tr>
+        <tr>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+        </tr>
+    </table>
+    <div id="div"></div>
+    
+    <script>
+        let arrayName = ["Abdullateef", "Sodiq", "Aishat", "Latifat", "Habeeb", "Sekinat", "AbdulQudus", "Faruk", "Isiak"]
+        let demo = document.getElementById("FirstId")
+        function build() {
+            let tables = document.getElementById("html")
+            let rows = document.getElementsByTagName("td")
+            for (let i = 0; i < arrayName.length; i++) {
+                rows.item(i).innerText = arrayName[i]
+
+            }
+        }
+        build()
+        let div = document.getElementById("div")
+        div.setAttribute("class", "data-row")
+        console.log(div);
+
+
+        function getData(x) {
+            // let message = document.querySelector("Html")
+            // let text = message.getAttribute("id")
+            // let txt = "As salam Alaikum"
+            // document.getElementById("Message").innerText = txt
+            let element = document.getElementById("html")
+            let text = element.getAttribute("class")
+            let message = document.getElementById("div")
+            message.innerText = text
+        }
+    </script>
+</body>
+
+</html>

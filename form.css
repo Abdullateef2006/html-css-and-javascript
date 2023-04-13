@@ -1,0 +1,47 @@
+form {
+    border: 1px dotted blue;
+    padding: 0.5em; 
+    
+}
+
+input {
+    color: #00008b;
+    background-color: #add8e6;
+    border: 1px solid #00008b;
+    
+}
+
+select {
+    width: 100px;
+    color: #00008b;
+    background-color: #add8e6;
+    border: 1px solid #00008b;
+}
+
+textarea {
+    width: 100px;
+    height: 40px;
+    color: #00008b;
+    background-color: #add8e6;
+    border: 1px solid #00008b;
+}
+
+li {
+    color: red;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+}
+
+#submit {
+    background-color: transparent ;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+#reset {
+    background-color: darkgoldenrod;
+    font-family: Arial, Helvetica, sans-serif;
+}
+

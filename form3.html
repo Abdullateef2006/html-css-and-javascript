@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form2.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label for="first name">First name:</label></td>
+            <td><input type="text" name="fName" id="fName" class="text"></td>
+        </tr>
+        <tr>
+            <td><label for="last name">Last name:</label></td>
+            <td><input type="text" name="lName" id="lName" class="text"></td>
+        <tr>
+            <td><label for="gender">gender:</label></td>
+            <td><input type="text" name="gend" id="gend" class="text" list="gender"></td>
+                <datalist id="gender">
+                    <option value="Male">
+                    <option value="Female">
+                </datalist>
+        </tr>
+        <tr>
+            <td><label for="time">Time:</label></td>
+            <td><input type="time" name="tim" id="tim" class="text"></td>
+        </tr>
+        <tr>
+            <td><label for="time">datetime-local:</label></td>
+            <td><input type="datetime-local" name="tim1" id="tim1" class="text"></td>
+        </tr>
+        <tr>
+            <td><label for="month">Month:</label></td>
+            <td><input type="month" name="mont" id="mont" class="text"></td>
+        </tr>
+        <tr>
+            <td><label for="week">Week:</label></td>
+            <td><input type="week" name="wik" id="wik" class="text"></td>
+        </tr>
+        <tr>
+            <td><label for="date of birth">Date of BIrth:</label></td>
+            <td><input type="date" name="dBirth" id="dBirth" class="text"></td>
+        </tr>
+        <tr>
+            <td><label for="hobby">Hobby:</label></td>
+            <td><textarea type="text" name="hob" id="hob" class="text"></textarea></td>
+        </tr>
+    </table>
+    <p><input type="submit" name="btnSubmit" id="btnSubmit" value="Register" class="btn"></p>
+</body>
+</html>

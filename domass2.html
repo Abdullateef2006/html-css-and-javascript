@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome.css">
+    <link rel="stylesheet" href="fontawesome.min.css">
+    <script src="a076d05399.js"></script>
+    <script src="a076d05399.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        * {
+            font-family: Bree Serif;
+            text-shadow: 0 0 1px #FF0000;
+        }
+
+        body {
+            background: #f9f9f9;
+
+        }
+
+        .body {
+            border: 0;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            background: #f9f9f9;
+            padding-left: 70px;
+            padding-right: 70px;
+            border-radius: 10px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            display: inline-block;
+            margin-left: 400px;
+            margin-top: 200px;
+        }
+
+        #addItem {
+            width: 300px;
+            height: 50px;
+            border: 0;
+            border-radius: 8px;
+            padding-left: 40px;
+            font-size: large;
+            color: black;
+            font-weight: 500;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            background: #f9f9f9;
+            margin-top: 40px;
+
+
+        }
+
+        #addNew {
+            border: 0;
+            border-radius: 8px;
+            font-size: large;
+            color: black;
+            font-weight: 500;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            background: #f9f9f9;
+            margin-top: 40px;
+            height: 50px;
+            width: 100px;
+            margin-left: 40px;
+        }
+
+        li {
+            list-style-type: none;
+        }
+        .div1 {
+            border: 0;
+            border-radius: 8px;
+            font-size: large;
+            color: black;
+            font-weight: 500;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            background: #f9f9f9;
+            margin-top: 40px;
+            height: 50px;
+            /* width: 400px; */
+            padding-top: 18px;
+            /* padding-bottom: 10px; */
+            padding-left: 30px;
+            padding-right: 30px;
+            display: flex;
+            /* justify-content: space-between; */
+
+            /* margin-left: 40px; */
+        }
+        .div2 {
+            height: 80%;
+            width: 60%;
+            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            background: #f9f9f9; */
+            padding-left: 30px;
+            padding-right: 30px;
+            
+            /* padding-top: 18px; */
+            
+        }
+        .div3 {
+            height: 80%;
+            width: 20%;
+            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            background: #f9f9f9; */
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-left: 40px;
+            display: flex;
+            /* padding-top: 7px; */
+        }
+        .reset, .del {
+            height: 100%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            background: #f9f9f9;
+            border: 0;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <div id="message">My complete DOM javascript</div>
+        <div>
+            <input type="text" name="" id="addItem" placeholder="Enter your shoping list">
+            <button id="addNew">Add</button>
+            <!-- <button id="remove">Remove</button> -->
+        </div>
+        <div id="output">
+            <h1>Shopping List</h1>
+            <!-- <div id="s-list"></div> -->
+        </div>
+    </div>
+    <i class="fa fa-check"></i>
+   
+
+
+    <script>
+        let addNew = document.getElementById("addNew")
+        let addItem = document.getElementById("addItem")
+        let listItems = document.getElementById("s-list")
+        let remove = document.getElementById("remove")
+        let output = document.getElementById("output")
+        addNew.addEventListener("click", addone)
+        function addone() {
+            let div1 = document.createElement("div")
+            div1.classList.add("div1")
+            output.appendChild(div1)
+
+            let div2 = document.createElement("div")
+            div2.classList.add("div2")
+            div1.appendChild(div2)
+
+            let div3 = document.createElement("div")
+            div3.classList.add("div3")
+            div1.appendChild(div3)
+
+            let btnreset = document.createElement("button")
+            btnreset.classList.add("reset")
+            div3.appendChild(btnreset)
+            btnreset.textContent = "Completed"
+
+            let btnDel = document.createElement("button")
+            btnDel.classList.add("del")
+            div3.appendChild(btnDel)
+            btnDel.textContent = "Delete"
+
+            let li = document.createElement("li")
+            div2.appendChild(li)
+            let items = addItem.value
+            li.innerText = items
+
+            btnreset.addEventListener("click", btnFunc)
+            function btnFunc() {
+                div2.style.textDecoration = "line-through"
+            }
+
+            btnDel.addEventListener("click", delFunc)
+            function delFunc() {
+                div1.remove()
+            }
+            
+            // if (addItem.value = "") {
+            //     alert("You must enter a shoping list")
+            // }
+
+            addItem.value = " "
+        }
+
+        // remove.addEventListener("click", Remove)
+        // function Remove() {
+        //     listItems.removeChild(listItems.lastElementChild)
+        // }
+
+    </script>
+
+</body>
+
+</html>

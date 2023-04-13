@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function change() {
+            document.getElementById("firstId").classList.toggle("blue")
+        }
+        function toggle() {
+            document.getElementById("firstId").classList.toggle("hide")
+        }
+    </script>
+    <style>
+        .hide {
+            display: none;
+        }
+        .square {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+        .square.blue {
+            background-color: blue;
+        }
+    </style>
+    <div id="firstId" class="square blue"></div>
+    <button onclick="change()">change the square</button>
+    <button onclick="toggle()">Hide the square</button>
+</body> 
+</html>

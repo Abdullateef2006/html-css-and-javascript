@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        color: red;
+        font-size: smaller;
+        
+    }
+</style>
+
+<body>
+    <div id="wrapper"></div>
+    <form action="formgroup-css.html" method="get">
+        <input type="text" id="fName" name="fName" placeholder="Enter your first name"><br>
+        <p id="demo"></p>
+        <input type="text" id="lName" name="lName" placeholder="Enter your last name"><br>
+        <p id="demo1"></p>
+        <input type="text" id="age" name="age" placeholder="Enter your age"><br>
+        <p id="demo3"></p>
+        <p id="review"></p>
+        <input type="submit" value="submit"><br>
+    </form>
+    <script>
+        let demo = document.getElementById("demo")
+        let demo1 = document.getElementById("demo1")
+        
+        let demo2 = document.getElementById("demo1")
+        let review = document.getElementById("review")
+        let form = document.querySelector("form")
+        let eMail = document.querySelector("#email")
+        form.addEventListener("submit", (e) => {
+            let error = false
+            if (checker(form.fName.value)) {
+                demo.textContent = "first name needed"
+                alert("first name needed")
+                error = true
+            }
+            if (checker(form.lName.value)) {
+                demo1.textContent = "last name needed"
+                alert("last name needed")
+                error = true
+            }
+            if (form.age.value < 19) {
+                demo3.textContent = "you must be 19 and above"
+                alert("you must be 19 and above")
+                error = true
+            }
+            if (error) {
+                e.preventDefault()
+                review.textContent = "Please review the form"
+                alert("Please review the form")
+            }
+        }
+        )
+        function checker(val) {
+            alert(val.length);
+            if (val.length < 4) {
+                return true
+            }
+            return false
+        }
+        // function valForm() {
+        //     let x = event.target.children
+        //     if (x.fName.value == " ") {
+        //         message("You need to input your first name")
+        //         return false
+        //     }
+        //     if (x.lName.value == " ") {
+        //         message("You need to input your last name")
+        //         return false
+        //     }
+        //     if (x.age.value == " ") {
+        //         message("You need to input your age")
+        //         return false
+        //     }
+        //     return true
+        // }
+        // function message(msg) {
+        //     document.getElementById("wrapper").innerHTML = message
+        // }
+    </script>
+</body>
+
+</html>

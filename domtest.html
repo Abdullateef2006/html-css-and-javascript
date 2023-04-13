@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,tr,td,th {
+        border: 0.3px solid;
+    }
+</style>
+<body>
+    <div id="message">Interactive voting system</div>
+    <div>
+        <input type="text" id="addFriend">
+        <input type="button" id="addNew" value="Add Friend">
+    </div>
+    <table id="output"></table>
+    <script>
+        let arrayName = ["Abdullateef", "sodiq", "Habeeb"]
+        let friend = document.getElementById("addFriend")
+        let addNew = document.getElementById("addNew")
+        let output = document.getElementById("output")
+        let count = 0
+        addNew.addEventListener("click", funcOne)
+        function funcOne() {
+            let newFriend = friend.value
+            // output.innerHTML = newFriend
+            arrayName.push(newFriend)
+            arrayName.forEach((item, index) => {
+                main()
+                function main() {
+                    let createtr = document.createElement("tr")
+                    output.appendChild(createtr)
+                    let createtd = document.createElement("td")
+                    let createtd1 = document.createElement("td")
+                    let createtd2 = document.createElement("td")
+                    createtd.innerText += `${index + 1}`
+                    createtd1.innerHTML += `${item}`
+                    createtd2.innerText += `${count}`
+                    createtr.appendChild(createtd)
+                    createtr.appendChild(createtd1)
+                    createtr.appendChild(createtd2)
+                    createtd1.addEventListener("click", funcTwo)
+                    function funcTwo() {
+                        count += 1
+                        createtd2.innerHTML += `${index}`
+                    }
+                }
+            })
+        }
+        
+      
+
+
+    </script>
+
+</body>
+
+</html>

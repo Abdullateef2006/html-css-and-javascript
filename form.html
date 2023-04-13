@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>my form list</legend>
+            <ol>
+                <li id="myname"><label for="fName">First Name:</label><input type="text" name="fName" placeholder="Enter your first name"></li>
+                <li><label for="lName">Last Name:</label><input type="text" name="lName" placeholder="Enter your last name"></li>
+                <li><label for="gend">Gender:</label><input type="text" list="gender" name="gOpt">
+                    <datalist id="gender">
+                        <option value="Male">
+                        <option value="Female">
+                    </datalist>
+                    <select>
+                        <option id="gender">male</option>
+                        <option id="gender">female</option>
+                    </select>
+                </li>
+                <li><label for="tim">time</label><input type="time"></li> 
+                <li><label for="tim">Datetime Local</label><input type="datetime-local"></li> 
+                <li><label for="mont">Month</label><input type="month"></li>
+                <li><label for="wik">Week</label><input type="week"></li>
+                <li><label for="dBirth">Date of Birth:</label><input type="date" name="dBirth" placeholder="Enter your Date of Birth"></li>
+                <li><label for="hob">Hobby:</label><textarea type="text" name="hob" placeholder="Enter your Hobby"></textarea> </li>
+            </ol>
+            <input type="submit" value="CLICK TO SUBMIT" id="submit">
+            <input type="reset" value="CLICK TO CLEAR" id="reset">
+        </fieldset>
+    </form>
+    
+</body>
+</html>

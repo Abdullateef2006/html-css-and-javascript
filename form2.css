@@ -1,0 +1,72 @@
+/* #fName {
+    background-color: greenyellow;
+    border: 1px solid red;
+}
+
+#lName {
+    background-color: aquamarine;
+    border: 1px solid blue;
+}
+
+#gend {
+    background-color: burlywood;
+    border: 1px solid green;
+}
+
+#tim {
+    background-color: cyan;
+    border: 1px solid black;
+}
+
+#tim1 {
+    background-color: darkgray;
+    border: 1px solid chocolate;
+}
+
+#mont {
+    background-color: cornflowerblue;
+    border: 1px solid rebeccapurple;
+}
+
+#wik {
+    background-color: hotpink;
+    border: 1px solid indigo;
+}
+
+#dBirth {
+   background-color: olive;
+   border: 1px solid maroon;
+}
+
+
+
+#hob {
+    background-color: pink;
+    border: 1px solid orangered;
+}
+
+#btnSubmit {
+    background-color:cyan;
+    border: 1px solid navy;
+}
+
+td {
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+
+input.text {
+    color: red;
+    background-color: aqua;
+    border: 1px inset red;
+    width: 150px; 
+    
+
+}
+
+textarea.text {
+    color: red;
+    background-color: aqua;
+    border: 1px inset red;
+    width: 150px; 
+}

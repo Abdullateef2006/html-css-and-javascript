@@ -1,0 +1,85 @@
+h1 {
+    font: 1.2em Arial, helvetica, sans-serif; 
+}
+
+input.txt {
+    color: blue;
+    background-color: chartreuse;
+    border:  1px solid blue;
+    width: 200px;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px inset blue;
+}
+
+textarea.txt {
+    color: blue;
+    background-color: chartreuse;
+    /* border:  1px inset blue; */
+    width: 200px;
+    /* border: 0; */
+    outline: 0;
+ 
+}
+
+
+.btn {
+    color: green;
+    background-color: aquamarine;
+    border: 1px outset green;
+}
+
+form div {
+    clear: left;
+    margin: 0;
+    padding: 0;
+    padding-top: 0.6em;
+
+}
+
+form div label {
+    float: left;
+    width: 40%;
+    font: bold 0.9em;
+    font-family: arial, Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+#hob {
+    color: blue;
+    background-color: chartreuse;
+    border:  1px inset blue;
+    width: 200px;
+
+
+} 
+
+fieldset {
+    border: 1px dotted red;
+    margin-top: 1.4em;
+    padding: 0.6em;
+    width: 40%;
+}
+
+legend {
+    font: bold 0.8em Arial, helvetica, san-serif;
+    color: green; 
+}
+
+.txt {
+    border-bottom: 1px dotted blue;
+    border: 0;
+    outline: 0;
+    background: transparent;
+
+}
+
+/* html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* .field label:first-child {
+    color: red;
+} */

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form for JAMB 2022</title>
+    <link rel="stylesheet" href="formdiv.css">
+</head>
+<body>
+    <h1>Registration form for JAMB 2022 </h1>
+    <form action="">
+        <div>
+            <label for="first name">First Name:</label>
+            <input type="text" name="fName" id="fName" class="txt">
+        </div> 
+        <div>
+            <label for="last name">Last Name:</label>
+            <input type="text" name="lName" id="lName" class="txt">
+        </div> 
+        <div>
+            <label for="gender">gender:</label>
+            <input type="text" name="gend" id="gend" class="txt" list="gender">
+                <datalist id="gender">
+                    <option value="Male">
+                    <option value="Female">
+                </datalist>        
+        </div>
+        <div>
+            <label for="time">Time:</label>
+            <input type="time" name="tim" id="tim" class="txt">        
+        </div>
+        <div>
+            <label for="time">datetime-local:</label>
+            <input type="datetime-local" name="tim1" id="tim1" class="txt">
+        </div>
+        <div>
+            <label for="month">Month:</label>
+            <input type="month" name="mont" id="mont" class="txt">
+        </div>
+        <div>
+            <label for="week">Week:</label>
+            <input type="week" name="wik" id="wik" class="txt">
+        </div>
+        <div>
+            <label for="date of birth">Date of Birth:</label>
+            <input type="date" name="dBirth" id="dBirth" class="txt">
+        </div>
+        <div>
+            <label for="hobby">Hobby:</label>
+            <textarea type="text" name="hob" id="hob" class="txt"></textarea>
+        </div>
+        <p><input type="submit" name="btnSubmit" id="btnSubmit" value="Register" class="btn"></p>   
+    </form>
+ 
+    
+</body>
+</html>
