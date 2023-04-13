@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="red">Red</div>
+    <div id="orange">Orange</div>
+    <div id="yellow">Yellow</div>
+    <div id="green">Green</div>
+    <div id="blue">Blue</div>
+    <div id="indigo">Indigo</div>
+    <div id="violet">Violet</div>
+    <button onclick="rainbowFunc()">Make me a rainbow</button>
+    <script>
+
+
+        function rainbowFunc() {
+            let rainbow= document.getElementsByTagName("div")
+            for (let i = 0; i < rainbow.length; i++) {
+                rainbow[i].style.backgroundColor = rainbow[i].id
+            }
+      
+        }
+        
+    </script>
+
+    <style>
+
+        
+        div {
+            height: 50px;
+            width: 700px;
+            background-color: white;
+            padding: 10px 4%;
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        button {
+            margin-left: 200px;
+        }
+    </style>
+</body>
+</html>

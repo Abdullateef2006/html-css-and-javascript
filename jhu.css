@@ -1,0 +1,11 @@
+p:first-child {
+    color: red;
+}
+
+p:nth-child(2) {
+    color: blue;
+}
+
+p:nth-child(3) {
+    color: green;
+} 

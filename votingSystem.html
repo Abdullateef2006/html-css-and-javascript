@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="message">Interactive voting system</div>
+    <div>
+        <input type="text" id="addFriend">
+        <input type="button" id="addNew" onclick="addNew1()" value="Add Friend">
+    </div>
+    <table id="output"></table>
+    <script>
+        window.onload = build
+        let arrayName = ["Abdullateef","Sodiq","Habeeb"]
+        let message = document.getElementById("message")
+        let addNew = document.getElementById("addNew")
+        let addFriend = document.getElementById("addFriend")
+        let output = document.getElementById("output") 
+        function addNew1() {
+            let newFriend = addFriend.value
+            adder(newFriend,arrayName.length,0)
+            arrayName.push(newFriend)
+            
+        }
+        function build() {
+            arrayName.forEach((item,index) => {
+                adder(item,index,0)
+            })
+        }
+        function adder(name,index,counter) {
+            let tr = document.createElement("tr")
+            let td1 = document.createElement("td")
+            td1.classList.add("box")
+            td1.textContent = index + 1
+            let td2  = document.createElement("td")
+            td2.textContent = name
+            let td3  = document.createElement("td")
+            td3.textContent = counter
+            tr.append(td1)
+            tr.append(td2)
+            tr.append(td3)
+            tr.onclick = function () {
+                console.log(tr.lastChild);
+                let val = Number(tr.lastChild.textContent)
+                val++
+                tr.lastChild.textContent = val
+            }
+            output.appendChild(tr)
+        }
+    </script>
+</body>
+</html>
